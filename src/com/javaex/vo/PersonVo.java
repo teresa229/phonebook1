@@ -1,6 +1,7 @@
 package com.javaex.vo;
 
 public class PersonVo {
+	
 	//필드
 	private int personId;
 	private String name;
