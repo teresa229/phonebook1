@@ -61,17 +61,15 @@ public class PhoneDao {
 	    }
 	}
 	
-	//리스트 목록 조회 (select)
-	//조회(select)
+	//리스트 목록 조회
+	//select
 	public List<PersonVo> getPersonList() {
 		List<PersonVo> phoneList = new ArrayList<PersonVo>();
 		
-		//DB접속
 		getConnection();
 		
 		try {
-		    // 3. SQL문 준비 / 바인딩 / 실행
-			/*
+		    /*
 			select  person_id,
 			        name,
 			        hp,
@@ -113,18 +111,16 @@ public class PhoneDao {
 		return phoneList;
 	}
 	
-	//저장(insert)
+	//insert 저장
 	public int personInsert(PersonVo pvo) {
 		int count = 0;                                                             
-        
-		//DB접속                                                                     
+                                                                         
 		getConnection();                                                           
 		                                                                           
-		try {                                                                      
-		    // 3. SQL문 준비 / 바인딩 / 실행      
+		try {                                                                         
 			/*
 			insert into person
-			values (seq_person_id.nextval, '김서영', '010-6666-6666', '02-6666-6666');
+			values (seq_person_id.nextval, '김경아', '010-6666-6666', '02-6666-6666');
 			*/
 			
 			String query = "";
@@ -156,12 +152,10 @@ public class PhoneDao {
 	public int personUpdate (PersonVo pvo) {
 		int count = 0;
 		
-		//DB접속
 		getConnection();
 		
 		try {
-		    // 3. SQL문 준비 / 바인딩 / 실행
-			/*
+		    /*
 			update person
 			set name = '유정재',
 			hp = '010-9999-9999',
@@ -199,16 +193,14 @@ public class PhoneDao {
 		return count;
 	}
 	
-	//삭제(delete)
+	//delete
 	public int personDelete(int personId) {
 		int count = 0;
 		
-		//DB접속
 		getConnection();
 		
 		try {
-		    // 3. SQL문 준비 / 바인딩 / 실행
-			/*
+		    /*
 			delete from person
 			where person_id = 5;
 			*/
@@ -235,11 +227,10 @@ public class PhoneDao {
 		return count;
 	}
 	
-	//검색(like문을 이용한 select)
+	//select 검색(like문 이용)
 	public List<PersonVo> personSearch(String str) {
 		List<PersonVo> personList = new ArrayList<PersonVo>();                                                
-        
-		//DB접속                                                                                                  
+                                                                                                         
 		getConnection();                                                                                        
 		                                                                                                        
 		try {                                                                                                   
