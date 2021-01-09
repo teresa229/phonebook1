@@ -11,6 +11,8 @@
 	PersonVo personVo = new PersonVo(personId, name, hp, company);
 	
 	PhoneDao phoneDao = new PhoneDao();
+	
+	/* update */
 	phoneDao.personUpdate(personVo);
 	
 	response.sendRedirect("./list.jsp");

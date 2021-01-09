@@ -4,6 +4,8 @@
 	int personId = Integer.parseInt(request.getParameter("id"));
 
 	PhoneDao phoneDao = new PhoneDao();
+	
+	/* delete */
 	phoneDao.personDelete(personId);
 	
 	response.sendRedirect("./list.jsp");

@@ -18,6 +18,7 @@
     /* http://localhost:8088/phonebook1/insert.jsp?name=김경아&hp=010-1111-1111&company=02-2222-2222 */
     
    	<form action="./insert.jsp" method="get"> /*현재 위치에서 불러오기 ./*/ /*get과 post중 우선은 get으로 넣기*/
+   	
    		이름(name): <input type ="text" name="name"><br>
    		핸드폰(hp): <input type="text" name="hp"><br>
    		회사(company): <input type ="text" name="company"><br>

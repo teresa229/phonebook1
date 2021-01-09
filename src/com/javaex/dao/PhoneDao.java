@@ -289,7 +289,7 @@ public class PhoneDao {
 		return personList;
 	}
 	 	//사람 1명 정보 가져오기
-	 	public PersonVo getPerson(int personId) {
+	 	public PersonVo getPerson(int personId) { // PersonVo로 불러오기: int x
 	 		PersonVo personVo = null;
 			getConnection();
 			try {
@@ -302,10 +302,10 @@ public class PhoneDao {
 				query += " from person         ";
 				query += " where person_id = ? ";
 			
-				pstmt = conn.prepareStatement(query);
-				pstmt.setInt(1, personId);
+				pstmt = conn.prepareStatement(query); //쿼리문 1차 완성
+				pstmt.setInt(1, personId);            //?세팅 : personId -> 완성되게 넣어준다.
 				
-				rs = pstmt.executeQuery();
+				rs = pstmt.executeQuery();            //결과문 완성 -> 결과처리
 				
 				//결과처리
 				while(rs.next()) {

@@ -14,7 +14,7 @@
 	
 	PhoneDao phoneDao = new PhoneDao();
 	
-	/* 저장 */
+	/* insert 저장 */
 	phoneDao.personInsert(personVo);
 	
 	/* 리스트 */
